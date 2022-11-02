@@ -1,0 +1,42 @@
+<html>
+<head>
+ <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"> </script>
+		 
+	<script type="text/javascript" language="javascript">
+	$(document).ready(function(){
+	
+	$("#submit").click(function(){
+	var op = "Name = " + $("#Name").val();
+	alert(op);
+	});
+	$("#reset").click(function(){
+	$("#Age").val('');
+	$("#Place").val('');
+	});
+	
+});
+</script>
+
+	<br><h2><legend> MY DETAILS <legend<><h2><br>
+	<body>
+<table id="mytable"border='1'>
+  <tr>
+    <td>Name</td>
+    <td>Age</td>
+    <td>Place</td>
+  </tr>
+  <tr>
+    <td><input type='text' id="Name" value="Anish"></input></td>
+    <td><input type='text' id='Age' value='23'></input></td>
+    <td><input type='text' id='Place' value='chennai' readonly='true'/></input></td>
+  </tr>
+ 
+</table>
+<br>
+ <input type="button" id="submit" value="submit" onclick=function() />
+  <input type='button' id='reset' value='reset' />
+  <input type='button' id='alert' value='alert' />
+</br>
+</head>
+</body>
+</html>
