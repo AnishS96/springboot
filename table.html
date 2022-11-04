@@ -8,8 +8,20 @@
 	$("#submit").click(function(){
 	var op = "Name = " + $("#Name").val();
 	alert(op);
-	});
-	$("#reset").click(function(){
+	
+	
+	var report="";
+$.ajax({
+type: "GET",
+url: "http://localhost:8080/heist/new/test?obj=add&a=3&b=7" ,
+success: function(data) {
+alert(JSON.stringify(data));
+
+//$("#report").html(report);
+}
+});
+});
+$("#reset").click(function(){
 	$("#Age").val('');
 	$("#Place").val('');
 	});
@@ -27,7 +39,7 @@
   </tr>
   <tr>
     <td><input type='text' id="Name" value="Anish"></input></td>
-    <td><input type='text' id='Age' value='23'></input></td>
+    <td><input type='text' id='Age' ></input></td>
     <td><input type='text' id='Place' value='chennai' readonly='true'/></input></td>
   </tr>
  
